@@ -28,6 +28,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
+doctype_js = {"Quotation" : "/duckerp/utils/quotation.js",
+			"Item":"/duckerp/utils/item.js",
+"Sales Order": "/duckerp/utils/sales_order.js"}
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -119,7 +122,11 @@ app_license = "mit"
 # }
 
 # Document Events
-# ---------------
+doc_events = {
+	"Item": {
+		"validate": "duckerp.duckerp.utils.item.weight_calculate",
+	}
+}
 # Hook on document methods and events
 
 # doc_events = {
